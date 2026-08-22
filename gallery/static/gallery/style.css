@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d15;
+    background-image: radial-gradient(circle at 20% 20%, rgba(108, 99, 255, 0.15), transparent 40%),
+                       radial-gradient(circle at 80% 60%, rgba(0, 255, 200, 0.1), transparent 40%);
+    margin: 0;
+    padding: 40px 20px;
+    color: #e6e6f0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #6c63ff, #00ffc8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.media-card {
+    background: #15151f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    padding: 18px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(108, 99, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(108, 99, 255, 0.25);
+}
+
+.media-card h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.media-card p {
+    color: #9a9ab0;
+    font-size: 14px;
+    margin: 0 0 8px;
+}
+
+.media-card img,
+.media-card video {
+    max-width: 100%;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.category-tag {
+    display: inline-block;
+    background: linear-gradient(90deg, #6c63ff, #00ffc8);
+    color: #0d0d15;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px;
+    letter-spacing: 0.3px;
+}
