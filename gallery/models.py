@@ -1,4 +1,6 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -17,7 +19,7 @@ class MediaItem(models.Model):
 
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    file = models.FileField(upload_to='media_items/')
+    file = CloudinaryField('file', resource_type='auto')
     media_type = models.CharField(max_length=5, choices=MEDIA_TYPE_CHOICES, default=IMAGE)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name='items')
     uploaded_at = models.DateTimeField(auto_now_add=True)
